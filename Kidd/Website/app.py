@@ -1,4 +1,12 @@
 from flask import Flask, render_template, redirect
+import pandas as pd
+import numpy as np
+import os
+import pickle
+import json
+
+# Custom function will go below
+# from modelHelper import ModelHelper
 
 # Create an instance of Flask
 app = Flask(__name__)
@@ -15,18 +23,29 @@ def works_cited():
 def data():
     return render_template("data.html")
 
+@app.route("/data2")
+def data2():
+    return render_template("data2.html")
 
+@app.route("/dashboard1")
+def dashboard1():
+    return render_template("dashboard1.html")
 
+@app.route("/dashboard2")
+def dashboard2():
+    return render_template("dashboard2.html")
 
+@app.route("/about_us")
+def about_us():
+    return render_template("about_us.html")
 
+@app.route("/ml")
+def ml():
+    return render_template("ml.html")
 
-
-
-
-
-
-
-
+@app.route("/paper")
+def paper():
+    return render_template("paper.html")
 
 #####################################################################
 @app.after_request

@@ -18,14 +18,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
     <!-- Our own CSS stylesheet -->
-    <link rel="stylesheet" href="assets/css/styles.css" media="screen">
+    <link rel="stylesheet" href="static/css/styles.css" media="screen">
 </head>
 
 <body>
     <!-- Placeholder Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin-bottom:50px;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Wine Quality Analysis</a>
+            <a class="navbar-brand" href="/">Wine Quality Analysis</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,24 +34,24 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Visualizations</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="visualizations/dashboard1.html">Dashboard 1</a>
-                            <a class="dropdown-item" href="visualizations/dashboard2.html">Dashboard 2</a>
-                            <a class="dropdown-item" href="visualizations/ml.html">Machine Learning</a>
-                            <a class="dropdown-item" href="visualizations/paper.html">Analytic Write-Up</a>
+                            <a class="dropdown-item" href="/dashboard1">Dashboard 1</a>
+                            <a class="dropdown-item" href="/dashboard2">Dashboard 2</a>
+                            <a class="dropdown-item" href="/ml">Machine Learning</a>
+                            <a class="dropdown-item" href="/paper">Analytic Write-Up</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Tables</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="visualizations/data.html">ML Data</a>
-                            <a class="dropdown-item" href="visualizations/data2.html">Tableau Data</a>
+                            <a class="dropdown-item" href="/data">ML Data</a>
+                            <a class="dropdown-item" href="/data2">Tableau Data</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="works_cited.html">Works Cited</a>
+                        <a class="nav-link" href="/works_cited">Works Cited</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about_us.html">About Us</a>
+                        <a class="nav-link" href="/about_us">About Us</a>
                     </li>
                 </ul>
             </div>
@@ -60,67 +60,18 @@
     <!-- End of navbar -->
     <!-- Outer Container -->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
                 <div class="card border-primary mb-3">
                     <div class="card-header">
-                        <h1>Wind Speed</h1>
+                        <h1>Analytic Write-Up</h1>
                     </div>
                     <div class="card-body">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-md-12" style="text-align: center;">
-                                    <img src="../assets/images/wind.png" width="70%" style="margin-bottom:30px;">
-                                </div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col-md-12">
-                                    <p>The Earth contains five major wind zones: polar easterlies, westerlies, horse latitudes, trade winds, and the doldrums. Polar easterlies 
-                                        are dry, cold prevailing winds that blow from the east. They emanate from the polar highs, areas of high pressure around the North and 
-                                        South Poles. Polar easterlies flow to low-pressure areas in sub-polar regions. Westerlies are prevailing winds that blow from the west 
-                                        at midlatitudes. They are fed by polar easterlies and winds from the high-pressure horse latitudes, which sandwich them on either side. 
-                                        Westerlies are strongest in the winter, when pressure over the pole is low, and weakest in summer, when the polar high creates stronger 
-                                        polar easterlies. The strongest westerlies blow through the “Roaring Forties,” a wind zone between 40 and 50 degrees latitude in the 
-                                        Southern Hemisphere. Throughout the Roaring Forties, there are few landmasses to slow winds. The tip of South America and Australia, as 
-                                        well as the islands of New Zealand, are the only large landmasses to penetrate the Roaring Forties. The westerlies of the Roaring Forties 
-                                        were very important to sailors during the Age of Exploration, when explorers and traders from Europe and western Asia used the strong winds 
-                                        to reach the spice markets of Southeast Asia and Australia.</p>
-                                    <p>Westerlies have an enormous impact on ocean currents, especially in the Southern Hemisphere. Driven by westerlies, the powerful Antarctic 
-                                        Circumpolar Current (ACC) rushes around the continent (from west to east) at about 4 kilometers per hour (2.5 miles per hour). In fact, 
-                                        another name for the Antarctic Circumpolar Current is the West Wind Drift. The ACC is the largest ocean current in the world, and is 
-                                        responsible for transporting enormous volumes of cold, nutrient-rich water to the ocean, creating healthy marine ecosystems and food webs. 
-                                        The horse latitudes are a narrow zone of warm, dry climates between westerlies and the trade winds. Horse latitudes are about 30 and 35 
-                                        degrees north and south. Many deserts, from the rainless Atacama of South America to the arid Kalahari of Africa, are part of the horse 
-                                        latitudes. The prevailing winds at the horse latitudes vary, but are usually light. Even strong winds are often short in duration.</p>
-                                    <p>The above informations is provided by <a href="https://education.nationalgeographic.org/resource/wind" target="_blank">National Geographic.</a></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card border-primary mb-3">
-                    <div class="card-header">
-                        <h1>Visualizations</h1>
-                    </div>
-                    <div class="card-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <a href="temp.html"><img src="../assets/images/temp.png" width="100%"></a>
-                                </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <a href="humidity.html"><img src="../assets/images/humid.png" width="100%"></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <a href="cloudiness.html"><img src="../assets/images/cloud.png" width="100%"></a>
-                                </div>
-                                <div class="col-md-6 col-sm-6" style="border: 3px solid">
-                                    <a href="wind.html"><img src="../assets/images/wind.png" width="100%"></a>
+                                    <iframe src="static\pdf\PLACEHOLDER_PDF.pdf" width="100%" height="680px">
+                                    </iframe>
                                 </div>
                             </div>
                         </div>

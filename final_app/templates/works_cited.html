@@ -18,14 +18,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" integrity="sha384-9+PGKSqjRdkeAU7Eu4nkJU8RFaH8ace8HGXnkiKMP9I9Te0GJ4/km3L1Z8tXigpG" crossorigin="anonymous">
     <!-- Our own CSS stylesheet -->
-    <link rel="stylesheet" href="assets/css/styles.css" media="screen">
+    <link rel="stylesheet" href="static/css/styles.css" media="screen">
 </head>
 
 <body>
     <!-- Placeholder Nav Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary" style="margin-bottom:50px;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Wine Quality Analysis</a>
+            <a class="navbar-brand" href="/">Wine Quality Analysis</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -34,24 +34,24 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Visualizations</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="visualizations/dashboard1.html">Dashboard 1</a>
-                            <a class="dropdown-item" href="visualizations/dashboard2.html">Dashboard 2</a>
-                            <a class="dropdown-item" href="visualizations/ml.html">Machine Learning</a>
-                            <a class="dropdown-item" href="visualizations/paper.html">Analytic Write-Up</a>
+                            <a class="dropdown-item" href="/dashboard1">Dashboard 1</a>
+                            <a class="dropdown-item" href="/dashboard2">Dashboard 2</a>
+                            <a class="dropdown-item" href="/ml">Machine Learning</a>
+                            <a class="dropdown-item" href="/paper">Analytic Write-Up</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Data Tables</a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="visualizations/data.html">ML Data</a>
-                            <a class="dropdown-item" href="visualizations/data2.html">Tableau Data</a>
+                            <a class="dropdown-item" href="/data">ML Data</a>
+                            <a class="dropdown-item" href="/data2">Tableau Data</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="works_cited.html">Works Cited</a>
+                        <a class="nav-link" href="/works_cited">Works Cited</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about_us.html">About Us</a>
+                        <a class="nav-link" href="/about_us">About Us</a>
                     </li>
                 </ul>
             </div>
@@ -60,40 +60,33 @@
     <!-- End of navbar -->
 
     <!-- Start of container -->
-    <div class="col-md-8 offset-md-2">
-      <div class="card border-primary mb-3">
-          <div class="card-header">
-              <h1>Comparison: Latitude vs X</h1>
-          </div>
-          <div>
-            <p style="margin-top:25px; margin-left:25px;">Click any plot to get an in-depth analysis.</p>
-          </div>
-          <div class="card-body">
-              <div class="container-fluid">
-                  <div class="row">
-                      <div class="col-md-6 col-sm-6">
-                        <h3 text-align: center>vs. Max Temperature</h3>
-                        <a href="visualizations/temp.html"><img src="assets/images/temp.png" width="100%"></a>
-                      </div>
-                      <div class="col-md-6 col-sm-6">
-                        <h3 text-align: center>vs. Humidity</h3>
-                        <a href="visualizations/humidity.html"><img src="assets/images/humid.png" width="100%"></a>
-                      </div>
-                  </div>
-                  <div class="row">
-                      <div class="col-md-6 col-sm-6">
-                        <h3 text-align: center>vs. Cloudiness</h3>
-                          <a href="visualizations/cloudiness.html"><img src="assets/images/cloud.png" width="100%"></a>
-                      </div>
-                      <div class="col-md-6 col-sm-6">
-                        <h3 text-align: center>vs. Wind Speed</h3>
-                        <a href="visualizations/wind.html"><img src="assets/images/wind.png" width="100%"></a>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
+                <div class="card border-primary mb-3">
+                    <div class="card-header">
+                        <h1>Works Cited</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <p>Anton Budnyak, Dataset, Kaggle, Wine Rating & Price, <a href="https://www.kaggle.com/datasets/budnyak/wine-rating-and-price/" target="_blank"></a>https://www.kaggle.com/datasets/budnyak/wine-rating-and-price/</a> </p>
+                                    <p>Anubhav Rawat,  Tableau Dashboard, Tableau Public, Wine Reviews, https://public.tableau.com/app/profile/anubhav.rawat/viz/WineReviews_16123251982490/WineryDashboard </p>
+                                    <p>Chris Gray, Tableau Dashboard, Tableau Public, Wine Recommender Engine, https://public.tableau.com/app/profile/chris.gray/viz/WineRecommenderEngine/EngineDashboard</p>
+                                    <p>Mina Ozgen, Tableau Dashboard, Tableau Public, What Distinguishes a Good Wine?, https://public.tableau.com/app/profile/mina.ozgen/viz/WhatDistinguishesaGoodRedWine/winehistodash </p>
+                                    <p>Roald Schuring, Article, Towards Data Science, Predicting Grape Varieties, https://towardsdatascience.com/robosomm-chapter-1-predicting-grape-varieties-4c5beb505a7b </p>
+                                    <p>Ruthgn, Dataset, Kaggle, Wine Quality Data Set (Red & White Wine), https://www.kaggle.com/datasets/ruthgn/wine-quality-data-set-red-white-wine </p>
+                                    <p>Shulman David, Notebook, Kaggle, Wine classification with MLPClassifier, https://www.kaggle.com/code/shulmandavid/wine-classification-with-mlpclassifier </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
     <!-- End of container -->
 
   </body>
