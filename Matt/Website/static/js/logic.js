@@ -1,12 +1,12 @@
 $(document).ready(function() {
     console.log("Page Loaded");
 
-    $("#filter").click(function() {
+    $("#wine_predictions").click(function() {
         // alert("button clicked!");
-        makePredictions();
+        wine_predictions();
     });
 
-    function makePredictions() {
+    function wine_predictions() {
         var fixed_acidity = $("#fixed_acidity").val();
         var volatile_acidity = $("#volatile_acidity").val();
         var citric_acid = $("#citric_acid").val();
@@ -40,7 +40,7 @@ $(document).ready(function() {
         // Perform a POST request to the query URL
         $.ajax({
             type: "POST",
-            url: "/makePredictions",
+            url: "/wine_predictions",
             contentType: 'application/json;charset=UTF-8',
             data: JSON.stringify({ "data": payload }),
             success: function(returnedData) {
