@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, jsonify
+from flask import Flask, render_template, redirect, jsonify, request
 import pandas as pd
 import numpy as np
 import os
@@ -6,10 +6,13 @@ import pickle
 import json
 
 # Custom function will go below
-# from modelHelper import ModelHelper
+from modelHelper import ModelHelper
 
 # Create an instance of Flask
 app = Flask(__name__)
+app.config['WINE_IS_AWESOME'] = True
+
+modelHelper = ModelHelper()
 
 @app.route("/")
 def home():
@@ -39,9 +42,30 @@ def dashboard2():
 def about_us():
     return render_template("about_us.html")
 
-@app.route("/ml")
-def ml():
-    return render_template("ml.html")
+@app.route("/wine_predictions", methods=["POST"])
+def make_predictions():
+    data = request.get_json()
+    features = data['data']
+    print(features)
+
+    fixed_acidity = float(features['fixed_acidity'])
+    residual_sugar = float(features['residual_sugar'])
+    chlorides = float(features['chlorides'])
+    volatile_acidity = float(features['volatile_acidity'])
+    citric_acid = float(features['citric_acid'])
+    free_sulfur_dioxide = float(features['free_sulfur_dioxide'])
+    total_sulfur_dioxide = float(features['total_sulfur_dioxide'])
+    density = float(features['density'])
+    pH = float(features['pH'])
+    sulphates = float(features['sulphates'])
+    alcohol = float(features['alcohol'])
+
+    prediction = modelHelper.predict(fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol)
+    return jsonify({'prediction': str(prediction)})
+
+@app.route("/wine_predictions")
+def wine_predictions():
+    return render_template("/wine_predictions.html")
 
 @app.route("/paper")
 def paper():
