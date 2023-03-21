@@ -39,7 +39,7 @@ def about_us():
 
 @app.route("/wine_predictions", methods=["POST"])
 def make_predictions():
-    data = request.get_json()
+    data = request.json["data"]
     features = data['data']
     print(features)
 
