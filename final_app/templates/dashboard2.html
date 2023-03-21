@@ -36,6 +36,7 @@
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="/dashboard1">Dashboard 1</a>
                             <a class="dropdown-item" href="/dashboard2">Dashboard 2</a>
+                            <a class="dropdown-item" href="/tmap">Map</a>
                             <a class="dropdown-item" href="/wine_predictions">Machine Learning</a>
                             <a class="dropdown-item" href="/paper">Analytic Write-Up</a>
                         </div>
@@ -60,58 +61,40 @@
     <!-- End of navbar -->
     <!-- Outer Container -->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8">
+        <div class="row justify-content-center">
+            <div class="col-md-9">
                 <div class="card border-primary mb-3">
                     <div class="card-header">
-                        <h1>Humidity</h1>
+                        <h1>Dashboard 2: Tableau</h1>
                     </div>
-                    <div class="card-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12" style="text-align: center;">
-                                    <img src="../assets/images/humid.png" width="70%" style="margin-bottom:30px;">
-                                </div>
-                            </div>
-                            <div class="row">
-
-                                <div class="col-md-12">
-                                    <p>Latitude does not appear to have a stong correlative link to levels of humidity. From the hundreds of cities that were used in this study,
-                                      at latitudes ranging from -60 to +80, there was a wide variety of humidity percentages. Cities with very high humidity could be observed at
-                                      nearly all latitudes included in this analysis. More research will have to be done to determine if there is any link between these two variables.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                        <div class='tableauPlaceholder' id='viz1679359740602' style='position: relative'><noscript><a href='#'><img alt=' ' 
+                            src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SM&#47;SMUDABootcampHW18Kidd&#47;Dashboard1&#47;1_rss.png' 
+                            style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' 
+                                value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' />
+                                <param name='name' value='SMUDABootcampHW18Kidd&#47;Dashboard1' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' />
+                                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;SM&#47;SMUDABootcampHW18Kidd&#47;Dashboard1&#47;1.png' /> 
+                                <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' />
+                                <param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                
+                        <script type='text/javascript'>                    
+                            var divElement = document.getElementById('viz1679359740602');                    
+                            var vizElement = divElement.getElementsByTagName('object')[0];                    
+                            if (divElement.offsetWidth > 800) {
+                                vizElement.style.width = '100%';
+                                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                            } else if (divElement.offsetWidth > 500) {
+                                vizElement.style.width = '100%';
+                                vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                            } else {
+                                vizElement.style.width = '100%';
+                                vizElement.style.height = '1227px';
+                            }
+                            var scriptElement = document.createElement('script');
+                            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                            vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+                        </script>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card border-primary mb-3">
-                    <div class="card-header">
-                        <h1>Visualizations</h1>
-                    </div>
-                    <div class="card-body">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <a href="temp.html"><img src="../assets/images/temp.png" width="100%"></a>
-                                </div>
-                                <div class="col-md-6 col-sm-6" style="border: 3px solid">
-                                    <a href="humidity.html"><img src="../assets/images/humid.png" width="100%"></a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 col-sm-6">
-                                    <a href="cloudiness.html"><img src="../assets/images/cloud.png" width="100%"></a>
-                                </div>
-                                <div class="col-md-6 col-sm-6">
-                                    <a href="wind.html"><img src="../assets/images/wind.png" width="100%"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
         </div>
     </div>
 </body>

@@ -42,10 +42,10 @@ def dashboard2():
 def about_us():
     return render_template("about_us.html")
 
-@app.route("/wine_predictions", methods=["POST"])
-def make_predictions():
-    data = request.get_json()
-    features = data['data']
+@app.route("/predictions", methods=["POST"])
+def winePredictions():
+    features = request.json["data"]
+   
     print(features)
 
     fixed_acidity = float(features['fixed_acidity'])
@@ -60,16 +60,22 @@ def make_predictions():
     sulphates = float(features['sulphates'])
     alcohol = float(features['alcohol'])
 
-    prediction = modelHelper.predict(fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol)
-    return jsonify({'prediction': str(prediction)})
+    good_bad_prediction, color_prediction = modelHelper.winePredictions(fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol)
+    return jsonify({'good_bad_prediction': str(good_bad_prediction), 'color_prediction': str(color_prediction)})
 
 @app.route("/wine_predictions")
 def wine_predictions():
-    return render_template("/wine_predictions.html")
+    print()
+    print('winepage')
+    return render_template("wine_predictions.html")
 
 @app.route("/paper")
 def paper():
     return render_template("paper.html")
+
+@app.route("/tmap")
+def tmap():
+    return render_template("tmap.html")
 
 #####################################################################
 @app.after_request
