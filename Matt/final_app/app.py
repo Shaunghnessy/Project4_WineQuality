@@ -61,6 +61,8 @@ def winePredictions():
     alcohol = float(features['alcohol'])
 
     good_bad_prediction, color_prediction = modelHelper.winePredictions(fixed_acidity, volatile_acidity, citric_acid, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, density, pH, sulphates, alcohol)
+    print()
+    print(good_bad_prediction, color_prediction )
     return jsonify({'good_bad_prediction': str(good_bad_prediction), 'color_prediction': str(color_prediction)})
 
 @app.route("/wine_predictions")
