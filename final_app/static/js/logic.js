@@ -44,13 +44,13 @@ function winePredictions() {
         success: function(returnedData) {
             console.log(returnedData);
 
-            if (returnedData["prediction"] === "good") {
+            if (returnedData["good_bad_prediction"] === "Good") {
                 $("#output").text("That is some good Wine Homie!");
             } else {
                 $("#output").text("Save it for those annoying people you don't like. :(");
             }
             
-            if (returnedData["color"]) {
+            if (returnedData["color_prediction"]==="White") {
                 $("#output-color").text("It's a white wine.");
             } else {
                 $("#output-color").text("It's a red wine.");
